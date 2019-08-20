@@ -1,0 +1,19 @@
+{
+  "name": "s3-switch",
+  "version": "0.0.1",
+  "description": "Switch between many s3cfg files in command line",
+  "main": "index.js",
+  "author": "Julien Philippon <juphilippon@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^3.0.0",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.4",
+    "inquirer": "^6.5.1",
+    "user-home": "^2.0.0"
+  },
+  "bin": {
+    "s3s": "./index.js"
+  }
+}
