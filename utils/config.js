@@ -34,6 +34,9 @@ module.exports = {
   actual,
   content,
   validName (name) {
+    if (!name) {
+      return false
+    }
     return !!name.match(/^[a-zA-Z0-9-]+$/)
   },
   s3sDir,

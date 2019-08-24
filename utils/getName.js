@@ -3,9 +3,9 @@
 const inquirer = require('inquirer')
 const { validName } = require('./config')
 
-module.exports = (options, cb) => {
-  if (typeof options.name === 'string' && validName(options.name)) {
-    return cb(options.name)
+module.exports = (name, cb) => {
+  if (typeof name === 'string' && validName(name)) {
+    return cb(name)
   }
 
   return inquirer
@@ -14,7 +14,7 @@ module.exports = (options, cb) => {
         type: 'input',
         name: 'name',
         message: 'Configuration name :',
-        validate: (name, b, c) => {
+        validate: (name) => {
           if (!validName(name)) {
             return 'The name must be a string match with a-zA-Z0-9-'
           }

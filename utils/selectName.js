@@ -10,7 +10,6 @@ module.exports = (name, cb) => {
     validName(name) &&
     choices.indexOf(name) !== -1
   ) {
-    console.log(name)
     return cb(name)
   }
 
