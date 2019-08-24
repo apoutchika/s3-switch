@@ -1,6 +1,6 @@
 {
   "name": "s3-switch",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Switch between many s3cfg files in command line",
   "main": "index.js",
   "keywords": [
