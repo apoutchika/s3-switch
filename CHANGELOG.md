@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - commander: 3.0.0 → 14.0.3
   - fs-extra: 8.1.0 → 11.3.3
   - glob: 7.1.4 → 13.0.6
-  - inquirer: 6.5.1 → 13.3.0
+  - inquirer: 6.5.1 → 10.2.2 (kept at v10 for Node.js 18 compatibility)
 - Replaced `user-home` with native `os.homedir()`
 - Refactored callback-based functions to async/await
 - Improved error handling and type safety
