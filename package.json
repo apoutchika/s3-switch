@@ -15,15 +15,14 @@
     }
   },
   "bin": {
-    "s3s": "./dist/cli.js"
+    "s3s": "dist/cli.js"
   },
   "files": [
     "dist",
     "README.md",
     "LICENCE",
     "MIGRATION.md",
-    "CHANGELOG.md",
-    ".npmrc"
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "tsup",
