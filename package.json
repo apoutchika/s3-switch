@@ -1,6 +1,6 @@
 {
   "name": "s3-switch",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Switch between multiple s3cfg files from the command line",
   "type": "module",
   "packageManager": "pnpm@10.30.3",
