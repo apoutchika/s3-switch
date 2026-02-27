@@ -1,29 +1,76 @@
 {
   "name": "s3-switch",
   "version": "0.0.6",
-  "description": "Switch between many s3cfg files in command line",
-  "main": "index.js",
+  "description": "Switch between multiple s3cfg files from the command line",
+  "type": "module",
+  "packageManager": "pnpm@10.30.3",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "s3s": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENCE",
+    "MIGRATION.md",
+    "CHANGELOG.md",
+    ".npmrc"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build && npm test"
+  },
   "keywords": [
     "s3",
     "s3cmd",
+    "s3cfg",
     "aws",
-    "bash",
-    "switch"
+    "cli",
+    "config",
+    "switch",
+    "configuration",
+    "typescript"
   ],
+  "author": "apoutchika",
   "license": "MIT",
   "repository": {
-    "url": "git@github.com:apoutchika/s3-switch.git",
-    "type": "git"
+    "type": "git",
+    "url": "git+https://github.com/apoutchika/s3-switch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apoutchika/s3-switch/issues"
+  },
+  "homepage": "https://github.com/apoutchika/s3-switch#readme",
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
-    "commander": "^3.0.0",
-    "fs-extra": "^8.1.0",
-    "glob": "^7.1.4",
-    "inquirer": "^6.5.1",
-    "user-home": "^2.0.0"
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "fs-extra": "^11.3.3",
+    "glob": "^13.0.6",
+    "inquirer": "^13.3.0"
   },
-  "bin": {
-    "s3s": "./index.js"
+  "devDependencies": {
+    "@types/fs-extra": "11.0.4",
+    "@types/inquirer": "9.0.9",
+    "@types/node": "25.3.2",
+    "@vitest/coverage-v8": "4.0.18",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3",
+    "vitest": "4.0.18"
   }
 }
